@@ -10,7 +10,7 @@ The architecture of the hybrid network is
 
 The data flow of the code is:
 - A dataset of 3-dimensional vectors is created.
-- Keras sequential layer of depth 6 and 5 neurons is created.
+- Encoder: Keras sequential layer of depth 6 and 5 neurons is created.
 - The encoded vector is 2-dimensional.
 - Encode each vector as a quantum state by using each element of the vector as parameters of Displacement gate.
 - Initialize weights (parameters of quantum gates). The gates used are:
@@ -19,7 +19,7 @@ The data flow of the code is:
   - Displacement gate
   - Kerr gate
 - Set the cufoff dimension to 3, since we want the output vectors to be 3-dimensional for Prob() measurement.
-- Create a quantum circuit of 25 layers as specified in the paper.
+- Decoder: a quantum circuit of 25 layers as specified in the paper.
 - Using Pennylane's Tensorflow plug-in, convert the quantum circuit into a Keras layer.
 - Create a hybrid model by concatenating the classical and quantum layers.
 - Use Keras's built-in loss functions and optimizers for training (I used MSE for loss function and Adam for optimizer).
