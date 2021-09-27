@@ -12,7 +12,7 @@ The data flow of the code is:
 - A dataset of 3-dimensional vectors is created.
 - Keras sequential layer of depth 6 and 5 neurons is created.
 - The encoded vector is 2-dimensional.
-- Create a quantum state of each vector by using each element of the vector of Displacement gate.
+- Encode each vector as a quantum state by using each element of the vector as parameters of Displacement gate.
 - Initialize weights (parameters of quantum gates). The gates used are:
   - Squeezers
   - Interferometers composed of beam splitters and rotation gates
