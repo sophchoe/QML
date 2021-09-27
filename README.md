@@ -14,10 +14,10 @@ The data flow of the code is:
 - The encoded vector is 2-dimensional.
 - Encode each vector as a quantum state by using each element of the vector as parameters of Displacement gate.
 - Initialize weights (parameters of quantum gates). The gates used are:
-  - Squeezers
-  - Interferometers composed of beam splitters and rotation gates
-  - Displacement gates
-  - Kerr gates
+  - Squeezer
+  - Rotation gate
+  - Displacement gate
+  - Kerr gate
 - Set the cufoff dimension to 3, since we want the output vectors to be 3-dimensional for Prob() measurement.
 - Create a quantum circuit of 25 layers as specified in the paper.
 - Using Pennylane's Tensorflow plug-in, convert the quantum circuit into a Keras layer.
