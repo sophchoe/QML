@@ -27,4 +27,4 @@ The data flow of the code is:
 Note: The loss function is different from the one proposed in the paper. With Pennylane, the functionality of extracting state vectors is not supported yet, 
 hence I had to resort to a simpler loss function.
 
-From my experiment, SGD (stochastic gradient descent didn't perform as well as Adam. Experiments with different learning rates are highly encouraged.
+From my experiment, SGD (stochastic gradient descent didn't perform as well as Adam. Experiments with different learning rates are highly encouraged. Adam lr = 0.005 and lr = 0.3 worked well for me.
